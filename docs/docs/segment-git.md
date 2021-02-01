@@ -65,6 +65,7 @@ Local changes can also shown by default using the following syntax for both the 
 - github_icon: `string` - icon/text to display when the upstream is Github - defaults to `\uF408 `
 - gitlab_icon: `string` - icon/text to display when the upstream is Gitlab - defaults to `\uF296 `
 - bitbucket_icon: `string` - icon/text to display when the upstream is Bitbucket - defaults to `\uF171 `
+- azdo_icon: `string` - icon/text to display when the upstream is Azure DevOps - defaults to `\uE70C `
 - git_icon: `string` - icon/text to display when the upstream is not known/mapped - defaults to `\uE5FB `
 
 ### Colors

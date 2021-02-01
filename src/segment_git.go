@@ -94,6 +94,8 @@ const (
 	BitbucketIcon Property = "bitbucket_icon"
 	// GitlabIcon shows when upstream is gitlab
 	GitlabIcon Property = "gitlab_icon"
+	// AzDoIcon shows when upstream is Azure DevOps
+	AzDoIcon Property = "azdo_icon"
 	// GitIcon shows when the upstream can't be identified
 	GitIcon Property = "git_icon"
 	// WorkingColor if set, the color to use on the working area
@@ -211,8 +213,11 @@ func (g *git) getUpstreamSymbol() string {
 	if strings.Contains(url, "github") {
 		return g.props.getString(GithubIcon, "\uF408 ")
 	}
-	if strings.Contains(url, "gitlab") {
+	if strings.Contains(url, "mdevlab") {
 		return g.props.getString(GitlabIcon, "\uF296 ")
+	}
+	if strings.Contains(url, "azure") {
+		return g.props.getString(AzDoIcon, "\uE70C ")
 	}
 	if strings.Contains(url, "bitbucket") {
 		return g.props.getString(BitbucketIcon, "\uF171 ")

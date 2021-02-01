@@ -405,6 +405,7 @@ func bootstrapUpstreamTest(upstream string) *git {
 		values: map[Property]interface{}{
 			GithubIcon:    "GH",
 			GitlabIcon:    "GL",
+			AzDoIcon:      "AD",
 			BitbucketIcon: "BB",
 			GitIcon:       "G",
 		},
@@ -426,7 +427,7 @@ func TestGetUpstreamSymbolGitHub(t *testing.T) {
 }
 
 func TestGetUpstreamSymbolGitLab(t *testing.T) {
-	g := bootstrapUpstreamTest("gitlab.com/test")
+	g := bootstrapUpstreamTest("mdevlab.com/test")
 	upstreamIcon := g.getUpstreamSymbol()
 	assert.Equal(t, "GL", upstreamIcon)
 }
